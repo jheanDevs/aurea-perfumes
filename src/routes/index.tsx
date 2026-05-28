@@ -39,24 +39,24 @@ type LinkItem = {
 
 const links: LinkItem[] = [
   {
-    href: "https://wa.me/5589994144344?text=Ol%C3%A1%2C%20quero%20saber%20mais%20dos%20produtos",
+    href: import.meta.env.VITE_LINK_WHATSAPP,
     title: "Falar no WhatsApp",
     subtitle: "Atendimento rápido e personalizado",
     kind: "whatsapp",
   },
   {
-    href: "https://minhaloja.eudora.com.br/loja-jocivanesoares-25937110/categoria?category=promocao&utm_source=ab&utm_medium=hub_genericas&utm_campaign=general&page=2",
+    href: import.meta.env.VITE_LINK_EUDORA,
     title: "Loja Eudora",
     subtitle: "Promoções e perfumes exclusivos",
     kind: "logo",
   },
   {
-    href: "https://minhaloja.boticario.com.br/loja-jocivanesoares-25937110/categoria?category=promocao&utm_source=ab&utm_medium=hub_genericas&utm_campaign=general&page=2",
+    href: import.meta.env.VITE_LINK_BOTICARIO,
     title: "O Boticário",
     subtitle: "Perfumes e kits especiais",
     kind: "logo",
   },
-];
+].filter((item) => item.href);
 
 function Sparkle({ top, left, delay, size }: { top: string; left: string; delay: string; size: number }) {
   return (
