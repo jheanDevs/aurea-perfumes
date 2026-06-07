@@ -46,7 +46,9 @@ type LinkItem = {
   kind: LinkKind;
 };
 
-const links: LinkItem[] = [
+type LinkItemInput = Omit<LinkItem, "href"> & { href?: string };
+
+const links: LinkItem[] = ([
   {
     href: import.meta.env.VITE_LINK_WHATSAPP,
     title: "Falar no WhatsApp",
@@ -65,7 +67,7 @@ const links: LinkItem[] = [
     subtitle: "Perfumes e kits especiais",
     kind: "logo",
   },
-].filter((item) => item.href);
+] satisfies LinkItemInput[]).filter((item): item is LinkItem => Boolean(item.href));
 
 function Sparkle({ top, left, delay, size }: { top: string; left: string; delay: string; size: number }) {
   return (
