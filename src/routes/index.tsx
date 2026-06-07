@@ -140,7 +140,7 @@ function Index() {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="shimmer-btn border-draw group glass animate-fade-up rounded-2xl px-5 py-4 flex items-center gap-4 shadow-[var(--shadow-soft)] hover:-translate-y-0.5 hover:shadow-[0_18px_50px_-12px_oklch(0.55_0.05_55/0.28)] transition-all duration-500 focus-visible:outline-none"
+                className="shimmer-btn border-draw cursor-pointer group glass animate-fade-up rounded-2xl px-5 py-4 flex items-center gap-4 shadow-[var(--shadow-soft)] hover:-translate-y-0.5 hover:shadow-[0_18px_50px_-12px_oklch(0.55_0.05_55/0.28)] transition-all duration-500 focus-visible:outline-none"
                 style={{
                   animationDelay: `${0.35 + i * 0.12}s`,
                   ...(borderVars as CSSProperties),
@@ -176,7 +176,7 @@ function Index() {
             <AlertDialogTrigger asChild>
               <button
                 type="button"
-                className="w-full shimmer-btn border-draw group glass rounded-2xl px-5 py-4 flex items-center gap-4 shadow-[var(--shadow-soft)] hover:-translate-y-0.5 hover:shadow-[0_18px_50px_-12px_oklch(0.55_0.05_55/0.28)] transition-all duration-500 focus-visible:outline-none"
+                className="w-full shimmer-btn border-draw cursor-pointer group glass rounded-2xl px-5 py-4 flex items-center gap-4 shadow-[var(--shadow-soft)] hover:-translate-y-0.5 hover:shadow-[0_18px_50px_-12px_oklch(0.55_0.05_55/0.28)] transition-all duration-500 focus-visible:outline-none"
                 style={
                   {
                     "--bd-a": "oklch(0.78 0.14 150 / 0.95)",
