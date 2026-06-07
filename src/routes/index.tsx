@@ -2,6 +2,15 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Sparkles } from "lucide-react";
 import type { CSSProperties } from "react";
 import logo from "@/assets/aurea-logo.png";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
 
 // Brand-style WhatsApp glyph
 function WhatsAppIcon({ className }: { className?: string }) {
@@ -161,6 +170,49 @@ function Index() {
             );
           })}
         </nav>
+
+        <div className="mt-6 w-full animate-fade-up" style={{ animationDelay: "0.75s" }}>
+          <AlertDialog>
+            <AlertDialogTrigger asChild>
+              <button
+                type="button"
+                className="w-full shimmer-btn border-draw group glass rounded-2xl px-5 py-4 flex items-center gap-4 shadow-[var(--shadow-soft)] hover:-translate-y-0.5 hover:shadow-[0_18px_50px_-12px_oklch(0.55_0.05_55/0.28)] transition-all duration-500 focus-visible:outline-none"
+                style={
+                  {
+                    "--bd-a": "oklch(0.78 0.14 150 / 0.95)",
+                    "--bd-b": "oklch(0.62 0.16 150 / 0.95)",
+                  } as CSSProperties
+                }
+              >
+                <span className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[oklch(0.78_0.14_150)] to-[oklch(0.62_0.16_150)] text-white shadow-inner">
+                  <WhatsAppIcon className="h-6 w-6" />
+                </span>
+                <span className="flex-1 text-left">
+                  <span className="font-display block text-xl leading-tight text-[var(--taupe)]">
+                    Entrar no Grupo do WhatsApp
+                  </span>
+                  <span className="block text-[12px] text-[var(--taupe)]/65 mt-0.5">
+                    Novidades, reposições e promoções
+                  </span>
+                </span>
+                <span className="text-[var(--gold)] opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all">
+                  →
+                </span>
+              </button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>GRUPO EM DESENVOLVIMENTO</AlertDialogTitle>
+                <AlertDialogDescription>
+                  ESTAMOS PREPARANDO TUDO PRA VOCÊS!
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <div className="flex justify-end">
+                <AlertDialogAction>OK</AlertDialogAction>
+              </div>
+            </AlertDialogContent>
+          </AlertDialog>
+        </div>
 
         {/* Footer */}
         <footer className="mt-14 mb-2 text-center animate-fade-up" style={{ animationDelay: "0.9s" }}>
