@@ -67,6 +67,12 @@ const links: LinkItem[] = ([
     subtitle: "Perfumes e kits especiais",
     kind: "logo",
   },
+  {
+    href: import.meta.env.VITE_LINK_BERENICE,
+    title: "Quem Disse, Berenice?",
+    subtitle: "Promoções e queridinhos",
+    kind: "logo",
+  },
 ] satisfies LinkItemInput[]).filter((item): item is LinkItem => Boolean(item.href));
 
 function Sparkle({ top, left, delay, size }: { top: string; left: string; delay: string; size: number }) {

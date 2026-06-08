@@ -4,6 +4,7 @@ interface ImportMetaEnv {
   readonly VITE_LINK_WHATSAPP?: string;
   readonly VITE_LINK_EUDORA?: string;
   readonly VITE_LINK_BOTICARIO?: string;
+  readonly VITE_LINK_BERENICE?: string;
 }
 
 interface ImportMeta {
